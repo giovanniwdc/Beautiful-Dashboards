@@ -1,0 +1,24 @@
+{
+    "datasets_list":[
+        {
+            "name": "Dados Bancários-SP",
+            "file_name":"/amostra_banco_distrito.csv",
+            "Info":{
+                "source":"",
+                "description":"",
+                "link":"",
+                "last_access":""
+            }
+        },
+        {
+            "name": "Carros",
+            "file_name":"/MBA_CAR_ATTRIB.csv",
+            "Info":{
+                "source":"",
+                "description":"",
+                "link":"",
+                "last_access":""
+            }
+        }
+    ]
+}

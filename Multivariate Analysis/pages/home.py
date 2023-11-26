@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 
 import json
-
+import numpy as np
 from scripts.dataset import DataDict
 
 from constants.home import *
@@ -14,6 +14,20 @@ dash.register_page(__name__,external_stylesheets=EXTERNAL_STYLESHEETS, path='/')
 
 with open(DATA_DIR+"/datasets.json",  encoding='utf-8') as file:
     datasetList = json.load(file)['datasets_list']
+
+drop_down_menus = [
+    html.Div([
+        html.Span(menu["title"], className="list-title"),
+            dcc.Dropdown(
+            options=[{"label": option, "value": menu["options"][option]} for option in menu["options"].keys()],
+            searchable=False,
+            placeholder=menu["placeholder"],
+            id=menu["id"],
+            className="dropdown",
+            clearable=False
+        )
+    ], className="item") for menu in DATASET_MENU_DROPDOWN
+]
 
 layout = html.Div(
     [   
@@ -29,43 +43,8 @@ layout = html.Div(
                         className="dropdown",
                         clearable=False,
                     )
-                ], className="item")
-                ,
-                html.Div([
-                    html.Span("Delimiter", className="list-title"),
-                        dcc.Dropdown(
-                        options=[{"label": option, "value": DELIMITER_OPTIONS[option]} for option in DELIMITER_OPTIONS.keys()],
-                        searchable=False,
-                        placeholder="Select a delimiter",
-                        id="delimiter-list",
-                        className="dropdown",
-                        clearable=False
-                    )
-                ], className="item")
-                ,
-                html.Div([
-                    html.Span("Decimal", className="list-title"),
-                    dcc.Dropdown(
-                        options=[{"label": option, "value": DECIMAL_OPTIONS[option]} for option in DECIMAL_OPTIONS.keys()],
-                        searchable=False,
-                        placeholder="Select a decimal",
-                        id="decimal-list",
-                        className="dropdown",
-                        clearable=False
-                    )
-                ], className="item")
-                ,
-                html.Div([
-                    html.Span("Encoding", className="list-title"),
-                    dcc.Dropdown(
-                        options=[{"label": option, "value": ENCODING_OPTIONS[option]} for option in ENCODING_OPTIONS.keys()],
-                        searchable=False,
-                        placeholder="Select a encoding",
-                        id="encoding-list",
-                        className="dropdown",
-                        clearable=False
-                    )
-                ], className="item")   
+                ], className="item"),
+                *drop_down_menus  
             ],className="menu"),
 
             html.Div([
@@ -73,8 +52,29 @@ layout = html.Div(
             ], id="dataset-show")
         ], className="dataset"),
         html.Div([
-            
-        ], className="data-options"),
+            html.Div([
+                html.Div([
+                    html.Span("Percentage of training", className="title"),
+                    dcc.Slider(
+                        50, 100, 5,
+                        value=60,
+                        id='train-slider',
+                    ),
+                ], className="sliders"),
+                html.Div([
+                    html.Span("Percentage of out of sample", className="title"),
+                    dcc.Slider(
+                        0, 50, 5,
+                        value=20,
+                        id='outofsample-slider',
+                    ),
+                ], className="sliders")
+            ], className="menu"),
+
+            html.Div([
+
+            ], className="menu menu-config")
+        ], className="split"),
         
         
         dbc.Modal(

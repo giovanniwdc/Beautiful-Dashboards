@@ -7,6 +7,8 @@
     flex-wrap: nowrap;
 
     justify-content: space-between;
+    
+    margin-bottom: 3vw;
 }
 
 .home .dataframe{
@@ -22,7 +24,7 @@
     justify-content: center;
     justify-items: center;
 
-    text-align: center;
+    text-align: center!important;
 }
 
 .home .dataset .Select-menu-outer{
@@ -31,12 +33,12 @@
 }
 
 .home .dataset .column-header-name{
-    text-align: center;
+    text-align: center!important;
 
 }
 
 .home .dataset .cell-table td{
-    text-align: center;
+    text-align: center!important;
     padding: 0.1vw;
 
 }
@@ -90,7 +92,7 @@
 
 }
 
-.home .menu .item .list-title{
+.home .menu .item .list-title, .home .sliders .title{
 
     font-size: 1.4vw;
 }
@@ -98,4 +100,29 @@
 .home  .menu .item .dropdown{
     width: 15vw;
     height: 1vw;
+}
+
+.home .split{
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home .split .sliders{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.home .split .sliders .title{
+    margin-bottom: 1vw;
+}
+
+.home .menu-config{
+    width: 68vw;
+    height: 100%;
 }

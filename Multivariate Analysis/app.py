@@ -6,7 +6,7 @@ import plotly.express as px
 
 import pandas as pd
 
-EXTERNAL_STYLESHEETS = ['/assets/app.css']
+EXTERNAL_STYLESHEETS = ['/assets/app.css', '/assets/home.css']
 
 app = Dash(__name__, external_stylesheets=EXTERNAL_STYLESHEETS, use_pages=True)
 

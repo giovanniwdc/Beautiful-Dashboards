@@ -8,31 +8,6 @@ READ_CSV_CONFIG={
 }
 
 @singleton
-class Dataset:
-    def __init__(self, path=None):
-
-        self._path = path
-        self._data = None
-        self.csv_config=READ_CSV_CONFIG
-
-        if path != None:
-            self.setData(path)
-        
-    def getData(self):
-        return self._data
-
-    def setData(self, path, **kwargs):
-        self._path = path
-        self._data = self._opendDataset(path, *kwargs)
-
-    def _opendDataset(self, path):
-        try:
-            data = pd.read_csv(path)
-            return data
-        except FileNotFoundError as error:
-            print("File path not found!")
-
-@singleton
 class DataDict:
 
     def __init__(self):

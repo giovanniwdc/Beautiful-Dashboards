@@ -1,3 +1,101 @@
-#data-list-dropdown{
-    margin: 1vw;
+.home .dataset{
+    display: flex;
+
+    height: 18vw;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+}
+
+.home .dataframe{
+    height: 100%;
+
+}
+
+.home .dataset .cell-table{
+    position: absolute;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    text-align: center;
+}
+
+.home .dataset .Select-menu-outer{
+    top:0vw;
+    border-radius: 0.25vw;
+}
+
+.home .dataset .column-header-name{
+    text-align: center;
+
+}
+
+.home .dataset .cell-table td{
+    text-align: center;
+    padding: 0.1vw;
+
+}
+
+.home .dash-table-container{
+    display: flex;
+    position: relative;
+
+    height: 100%;
+
+    flex-direction: column;
+    
+}
+
+.home .previous-next-container{
+    position: absolute;
+    align-self: flex-end;
+    bottom:-3vw;
+}
+
+.home .menu{
+    display: flex;
+
+    width: 28vw;
+    height: 100%;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border: solid rgba(0,0,0,0.1) 0.15vw;
+    border-radius: 1vw;
+
+    padding: 1vw;
+
+    margin-bottom: 2vw;
+
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.home .menu .item{
+
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    margin: 0.5vw;
+
+    justify-content: space-between;
+
+}
+
+.home .menu .item .list-title{
+
+    font-size: 1.4vw;
+}
+
+.home  .menu .item .dropdown{
+    width: 15vw;
+    height: 1vw;
 }

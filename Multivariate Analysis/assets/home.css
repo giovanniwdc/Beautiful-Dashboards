@@ -1,72 +1,22 @@
-.home .dataset{
+.home{
     display: flex;
+    flex-direction: column;
+}
 
-    height: 18vw;
+.home .row{
+    display: flex;
 
     flex-direction: row;
-    flex-wrap: nowrap;
-
-    justify-content: space-between;
-    
-    margin-bottom: 3vw;
 }
 
-.home .dataframe{
-    height: 100%;
-
-}
-
-.home .dataset .cell-table{
-    position: absolute;
-    height: 100%;
-
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-
-    text-align: center!important;
-}
-
-.home .dataset .Select-menu-outer{
-    top:0vw;
-    border-radius: 0.25vw;
-}
-
-.home .dataset .column-header-name{
-    text-align: center!important;
-
-}
-
-.home .dataset .cell-table td{
-    text-align: center!important;
-    padding: 0.1vw;
-
-}
-
-.home .dash-table-container{
-    display: flex;
-    position: relative;
-
-    height: 100%;
-
-    flex-direction: column;
-    
-}
-
-.home .previous-next-container{
-    position: absolute;
-    align-self: flex-end;
-    bottom:-3vw;
-}
-
-.home .menu{
+.home .left-component{
     display: flex;
 
     width: 28vw;
-    height: 100%;
+    height: 15vw;
 
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
     border: solid rgba(0,0,0,0.1) 0.15vw;
     border-radius: 1vw;
@@ -77,9 +27,10 @@
 
     justify-items: center;
     justify-content: space-between;
+
 }
 
-.home .menu .item{
+.home .top-menu .item{
 
     display: flex;
     flex-direction: row;
@@ -90,39 +41,4 @@
 
     justify-content: space-between;
 
-}
-
-.home .menu .item .list-title, .home .sliders .title{
-
-    font-size: 1.4vw;
-}
-
-.home  .menu .item .dropdown{
-    width: 15vw;
-    height: 1vw;
-}
-
-.home .split{
-    width: 100%;
-
-    display: flex;
-
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.home .split .sliders{
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.home .split .sliders .title{
-    margin-bottom: 1vw;
-}
-
-.home .menu-config{
-    width: 68vw;
-    height: 100%;
 }

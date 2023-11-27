@@ -1,10 +1,5 @@
-import dash
-from dash import Dash, html, dcc, callback, Output, Input,  State
-from dash.exceptions import PreventUpdate
+from dash import Dash, html, dcc, page_container
 
-import plotly.express as px
-
-import pandas as pd
 
 EXTERNAL_STYLESHEETS = ['/assets/app.css', '/assets/home.css']
 
@@ -27,7 +22,7 @@ app.layout = html.Div(
             html.Div(buttons, id='menuBar')
         ], className='header'),
         html.Div([
-            dash.page_container
+            page_container
         ], className='main', id='page_content'),
         html.Footer([])
     ],

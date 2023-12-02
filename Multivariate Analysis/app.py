@@ -21,9 +21,9 @@ app.layout = html.Div(
             html.P('Multivariate Analysis'),
             html.Div(buttons, id='menuBar')
         ], className='header'),
-        html.Div([
+        html.Div(
             page_container
-        ], className='main', id='page_content'),
+        , className='main', id='page_content'),
         html.Footer([])
     ],
     className='content'

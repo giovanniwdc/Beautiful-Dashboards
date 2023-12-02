@@ -1,12 +1,25 @@
 .home{
+
+    height: 100%;
+
+    padding: 1vw;
+
     display: flex;
+    
     flex-direction: column;
+
+    justify-content: space-around;
+
+
 }
 
 .home .row{
     display: flex;
 
     flex-direction: row;
+
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 .home .left-component{
@@ -18,27 +31,93 @@
     flex-direction: column;
     flex-wrap: nowrap;
 
+    justify-content: space-between;
+
+    border: solid rgba(0,0,0,0.1) 0.15vw;
+    border-radius: 1vw;
+
+    padding: 1vw;
+}
+
+.home .right-component{
+    display: flex;
+
+    width: 68vw;
+    height: 15vw;
+}
+
+.home .top-menu .right-component {
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+
     border: solid rgba(0,0,0,0.1) 0.15vw;
     border-radius: 1vw;
 
     padding: 1vw;
 
-    margin-bottom: 2vw;
-
-    justify-items: center;
-    justify-content: space-between;
-
 }
 
-.home .top-menu .item{
+.home .top-menu .right-component{
+    padding: 0;
+    justify-content: space-between;
+}
 
-    display: flex;
+.home .bottom-menu .left-component .sliders .title{
+    border-bottom: solid rgba(0,0,0,0.1) 0.15vw;
+    width: 80%;
+    font-weight: 500;
+    padding-bottom: 0.4vw;
+}
+
+.home .bottom-menu .left-component .sliders .slider{
+    margin-top: 0.5vw;
+}
+
+.home .bottom-menu .right-component{
+
     flex-direction: row;
 
-    width: 100%;
+    justify-content: space-between;
+}
 
-    margin: 0.5vw;
+.home .bottom-menu .right-component .distribution, 
+.home .bottom-menu .right-component #data-split-menu{
+    display: flex;
+
+    width: 33vw;
+    height: 15vw;
+    
+    border: solid rgba(0,0,0,0.1) 0.15vw;
+    border-radius: 1vw;
+
+    padding: 1vw;
+}
+
+.home .bottom-menu .right-component #data-split-menu{
+    flex-direction: column;
 
     justify-content: space-between;
-
 }
+
+.home .bottom-menu .right-component .distribution .menu{
+    width: 25%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.home .bottom-menu .right-component .distribution{
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.home .bottom-menu .right-component .distribution .graph{
+    width: 75%;
+}
+
+
